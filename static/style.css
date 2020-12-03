@@ -1,0 +1,21 @@
+*{
+    background-color: blue;
+}
+
+.first-body{
+
+    display: grid;
+    grid-template-columns: repeat(8, 1.5fr);
+    grid-template-rows: repeat(8, 1.5fr);
+    
+}
+#box{
+    height: 300px;
+    border: 2px solid white;
+}
+.second-body{
+    display: grid;
+    grid-template-columns: repeat(5, 1.5fr);
+    grid-template-rows: repeat(5, 1.5fr);
+    
+}

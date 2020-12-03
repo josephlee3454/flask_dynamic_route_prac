@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {  
+                
+                display: grid;
+                grid-template-columns: repeat({{num}}, 1.5fr);
+                grid-template-rows: repeat({{num2}}, 1.5fr);
+            }
+    </style>
+</head>
+<body >
+    {% for i in range(num2) %}
+        {%if i is even%}
+            {% for i in range(num) %}
+                {% if i is odd %}
+                    <div style="background-color:{{color1}}" id= "box">hello </div>
+                {% else %}
+                    <div style="background-color:{{color2}}" id= "box">bye </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for i in range(num) %}
+                {% if i is even %}
+                    <div style="background-color:{{color1}}" id= "box">hello </div>
+                {% else %}
+                    <div style="background-color:{{color2}}" id= "box">bye </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+    {% endfor %}
+</body>
+</html>
